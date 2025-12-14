@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jordani Coffee Shop – Order Coffee</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f1ee;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #4b2e1e;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #4b2e1e;
+        }
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 6px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        textarea {
+            resize: vertical;
+        }
+        .btn {
+            margin-top: 20px;
+            background-color: #4b2e1e;
+            color: #ffffff;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background-color: #3a2216;
+        }
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 15px;
+            color: #666;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Jordani Coffee Shop</h1>
+    <p>Order Your Favorite Coffee Online</p>
+</header>
+
+<div class="container">
+    <h2>Place Your Coffee Order</h2>
+    <p>Please fill in the form below. Your order will be sent directly to our email.</p>
+
+    <!-- 
+        This form uses 'mailto' to send an email notification.
+        NOTE: This requires the customer's device to have an email client configured.
+    -->
+    <form action="mailto:huguesbri2008@gmail.com" method="post" enctype="text/plain">
+
+        <label for="name">Customer Name</label>
+        <input type="text" id="name" name="Customer Name" required>
+
+        <label for="email">Customer Email</label>
+        <input type="email" id="email" name="Customer Email" required>
+
+        <label for="coffee">Select Coffee</label>
+        <select id="coffee" name="Coffee Type" required>
+            <option value="">-- Choose a coffee --</option>
+            <option value="Espresso">Espresso</option>
+            <option value="Cappuccino">Cappuccino</option>
+            <option value="Latte">Latte</option>
+            <option value="Americano">Americano</option>
+            <option value="Mocha">Mocha</option>
+        </select>
+
+        <label for="size">Cup Size</label>
+        <select id="size" name="Cup Size" required>
+            <option value="">-- Choose a size --</option>
+            <option value="Small">Small</option>
+            <option value="Medium">Medium</option>
+            <option value="Large">Large</option>
+        </select>
+
+        <label for="quantity">Quantity</label>
+        <input type="number" id="quantity" name="Quantity" min="1" value="1" required>
+
+        <label for="notes">Additional Notes</label>
+        <textarea id="notes" name="Additional Notes" rows="4" placeholder="Sugar level, milk preference, pickup time, etc."></textarea>
+
+        <button type="submit" class="btn">Send Order</button>
+    </form>
+</div>
+
+<footer>
+    <p>© 2025 Jordani Coffee Shop. Fresh Coffee, Every Day.</p>
+</footer>
+
+</body>
+</html>
